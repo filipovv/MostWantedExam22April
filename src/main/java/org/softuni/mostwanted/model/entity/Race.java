@@ -20,7 +20,7 @@ public class Race {
     @JoinColumn(name = "district_id", referencedColumnName = "id")
     private District district;
 
-    @Transient
+    @OneToMany(mappedBy = "race", cascade = CascadeType.ALL)
     private Set<RaceEntry> entries;
 
     public Race() {

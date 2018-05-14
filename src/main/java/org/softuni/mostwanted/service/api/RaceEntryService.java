@@ -1,5 +1,6 @@
 package org.softuni.mostwanted.service.api;
 
+import org.softuni.mostwanted.model.dto.xml.MostWantedWrapperXMLExportDto;
 import org.softuni.mostwanted.model.dto.xml.RaceEntryXMLImportDto;
 import org.softuni.mostwanted.model.entity.RaceEntry;
 
@@ -9,4 +10,7 @@ public interface RaceEntryService {
     RaceEntry findById(Integer id);
 
     void save(RaceEntry raceEntry);
+
+    MostWantedWrapperXMLExportDto getMostWantedRacer();
+
 }

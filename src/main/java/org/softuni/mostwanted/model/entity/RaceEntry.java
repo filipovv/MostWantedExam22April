@@ -25,7 +25,8 @@ public class RaceEntry {
     @JoinColumn(name = "racer_id", referencedColumnName = "id")
     private Racer racer;
 
-    @Transient
+    @ManyToOne
+    @JoinColumn(name = "race_id")
     private Race race;
 
     public RaceEntry() {

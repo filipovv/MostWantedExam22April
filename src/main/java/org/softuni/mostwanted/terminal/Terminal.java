@@ -50,5 +50,6 @@ public class Terminal implements CommandLineRunner {
         this.consoleIO.write(this.raceController.importDataFromXML(this.fileIO.read(Config.RACES_IMPORT_XML)));
 
         this.fileIO.write(this.townController.exportRacingTowns(), "racingTowns", "json");
+        this.fileIO.write(this.raceEntryController.exportMostWantedRacer(), "mostWanted", "xml");
     }
 }

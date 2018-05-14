@@ -44,4 +44,8 @@ public class RaceEntryController {
         }
         return sb.toString();
     }
+
+    public String exportMostWantedRacer() throws IOException, JAXBException {
+        return this.xmlParser.write(this.raceEntryService.getMostWantedRacer());
+    }
 }
